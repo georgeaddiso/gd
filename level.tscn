@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfgxtl2tri13l"]
+
+[ext_resource type="PackedScene" uid="uid://dacy0g54dttgh" path="res://player.tscn" id="1_u52ul"]
+[ext_resource type="PackedScene" uid="uid://dy07601jxnruw" path="res://1x_1_block.tscn" id="2_vonw3"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_u52ul")]
+position = Vector2(467, 217)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="1x1 block" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(474, 360)
+
+[node name="1x1 block2" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(614, 363)
+
+[node name="1x1 block3" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(755, 360)
+
+[node name="1x1 block4" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(897, 360)
+
+[node name="1x1 block5" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1033, 362)
+
+[node name="1x1 block6" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1168, 358)
+
+[node name="1x1 block7" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1306, 227)
+
+[node name="1x1 block8" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1574, 225)
+
+[node name="1x1 block9" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1710, 223)
+
+[node name="1x1 block10" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1851, 223)
+
+[node name="1x1 block11" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1849, 90)
