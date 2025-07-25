@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfgxtl2tri13l"]
+
+[ext_resource type="Script" uid="uid://bqqvlajlmxth5" path="res://level.gd" id="1_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://dacy0g54dttgh" path="res://player.tscn" id="1_u52ul"]
+[ext_resource type="PackedScene" uid="uid://dy07601jxnruw" path="res://1x_1_block.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://dcxfrhvmtjckk" path="res://killzone.tscn" id="4_f2txt"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_0b4ue")
+
+[node name="Player" parent="." instance=ExtResource("1_u52ul")]
+position = Vector2(492, 216)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="1x1 block" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(474, 360)
+
+[node name="1x1 block2" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(611, 360)
+
+[node name="1x1 block3" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(747, 360)
+
+[node name="1x1 block4" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(883, 360)
+
+[node name="1x1 block5" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1019, 360)
+
+[node name="1x1 block6" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1157, 360)
+
+[node name="1x1 block7" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1294, 226)
+
+[node name="1x1 block8" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1431, 226)
+
+[node name="1x1 block9" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1568, 226)
+
+[node name="1x1 block10" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1706, 226)
+
+[node name="1x1 block11" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1706, 92)
+
+[node name="Killzone" parent="." instance=ExtResource("4_f2txt")]
+position = Vector2(402, 217)
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]

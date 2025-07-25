@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://bqqvlajlmxth5" path="res://level.gd" id="1_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://dacy0g54dttgh" path="res://player.tscn" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://dy07601jxnruw" path="res://1x_1_block.tscn" id="2_vonw3"]
-[ext_resource type="PackedScene" uid="uid://dcxfrhvmtjckk" path="res://killzone.tscn" id="4_f2txt"]
+[ext_resource type="PackedScene" uid="uid://c5cugpycjkwgy" path="res://killzone.tscn" id="4_f2txt"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0b4ue")
 
 [node name="Player" parent="." instance=ExtResource("1_u52ul")]
-position = Vector2(492, 216)
+position = Vector2(-594, 220)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
@@ -29,24 +29,81 @@ position = Vector2(883, 360)
 position = Vector2(1019, 360)
 
 [node name="1x1 block6" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1157, 360)
+position = Vector2(1156, 360)
+
+[node name="1x1 block15" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1293, 360)
+
+[node name="1x1 block16" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1429, 360)
+
+[node name="1x1 block17" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1537, 334)
+
+[node name="1x1 block18" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1664, 320)
+
+[node name="1x1 block19" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1787, 287)
+
+[node name="1x1 block20" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1804, 210)
+
+[node name="1x1 block22" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1836, 226)
+
+[node name="1x1 block23" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1973, 226)
 
 [node name="1x1 block7" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1294, 226)
+position = Vector2(1293, 226)
 
 [node name="1x1 block8" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1431, 226)
+position = Vector2(1427, 226)
 
 [node name="1x1 block9" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1568, 226)
+position = Vector2(1564, 226)
 
 [node name="1x1 block10" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1706, 226)
+position = Vector2(1699, 226)
 
 [node name="1x1 block11" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(1706, 92)
+position = Vector2(1699, 92)
+
+[node name="1x1 block12" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(1836, 92)
+
+[node name="1x1 block21" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(-485, 360)
+
+[node name="1x1 block24" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(-74, 360)
+
+[node name="1x1 block25" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(-621, 360)
+
+[node name="1x1 block26" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(-348, 360)
+
+[node name="1x1 block27" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(-211, 360)
+
+[node name="1x1 block28" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(63, 360)
+
+[node name="1x1 block29" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(200, 360)
+
+[node name="1x1 block30" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(337, 360)
+
+[node name="1x1 block13" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(2109, 225)
+
+[node name="1x1 block14" parent="." instance=ExtResource("2_vonw3")]
+position = Vector2(2247, 92)
 
 [node name="Killzone" parent="." instance=ExtResource("4_f2txt")]
-position = Vector2(402, 217)
+position = Vector2(1215, 223)
 
 [connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
