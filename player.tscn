@@ -48,6 +48,7 @@ size = Vector2(83, 83)
 
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_4flbx")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.64, 0.64)
