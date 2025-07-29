@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dacy0g54dttgh"]
 
-[ext_resource type="Texture2D" uid="uid://caww2rr4p0w6j" path="res://icon.svg" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dd0k1gjvlyk7l" path="res://images/godot 2d character.png" id="1_4flbx"]
 
 [sub_resource type="GDScript" id="GDScript_4flbx"]
 script/source = "extends CharacterBody2D
@@ -51,8 +51,10 @@ script = SubResource("GDScript_4flbx")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.64, 0.64)
+position = Vector2(47, -2.55682)
+scale = Vector2(0.0908203, 0.0908203)
 texture = ExtResource("1_4flbx")
+offset = Vector2(-523.011, 11.6363)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -1.5)
