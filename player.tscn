@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dacy0g54dttgh"]
+[gd_scene load_steps=4 format=3 uid="uid://c81r3fluketfx"]
 
-[ext_resource type="Texture2D" uid="uid://dd0k1gjvlyk7l" path="res://images/godot 2d character.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://nhcq6njbwhdb" path="res://images/godot 2d character.png" id="1_4flbx"]
 
 [sub_resource type="GDScript" id="GDScript_4flbx"]
 script/source = "extends CharacterBody2D
@@ -9,7 +9,7 @@ script/source = "extends CharacterBody2D
 
 const SPEED = 550.0
 const JUMP_VELOCITY = -600.0
-const GRAVITY = 2000.0
+const GRAVITY = 2100.0
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity if not on the floor
@@ -21,6 +21,10 @@ func _physics_process(delta: float) -> void:
 	# Handle jump (ui_accept = spacebar/left click by default)
 	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
+	if Input.is_action_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
 
 	# Constant forward motion like Geometry Dash
 	velocity.x = SPEED
@@ -44,7 +48,7 @@ func _process(delta: float) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
-size = Vector2(83, 83)
+size = Vector2(73, 73)
 
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_4flbx")
@@ -52,10 +56,10 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(47, -2.55682)
-scale = Vector2(0.0908203, 0.0908203)
+scale = Vector2(0.081, 0.081)
 texture = ExtResource("1_4flbx")
 offset = Vector2(-523.011, 11.6363)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1.5)
+position = Vector2(4.5, -1.5)
 shape = SubResource("RectangleShape2D_i3pqv")
