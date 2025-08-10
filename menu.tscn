@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://doqn8y6hu87sy"]
+[gd_scene load_steps=3 format=3 uid="uid://doqn8y6hu87sy"]
 
 [ext_resource type="Script" uid="uid://dkjhdp28lm3br" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://bjq6luu46eyet" path="res://title.gd" id="2_ouk20"]
 
 [node name="Menu" type="Control"]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,8 +15,13 @@ script = ExtResource("1_lti8b")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 273.0
+offset_top = 303.0
+offset_right = 566.0
+offset_bottom = 528.0
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -31,4 +38,24 @@ text = "Options"
 layout_mode = 2
 text = "Quit"
 
+[node name="Title" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 111.0
+offset_right = 563.0
+offset_bottom = 166.0
+scale = Vector2(2, 2)
+script = ExtResource("2_ouk20")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Title"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Title/VBoxContainer"]
+layout_mode = 2
+text = "Meadow Dash 2D"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Title/VBoxContainer/Button" to="Title" method="_on_button_pressed"]

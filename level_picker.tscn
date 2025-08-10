@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://crphfklhedl83"]
+
+[ext_resource type="Script" uid="uid://cgp6cur8hk4j4" path="res://level_picker.gd" id="1_t0c5w"]
+
+[node name="Level picker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t0c5w")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Level 1 play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level 1 Play"
+
+[node name="Level 2 Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level 2 Play (not implemented)"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level 1 play" to="." method="_on_level_1_play_pressed"]
