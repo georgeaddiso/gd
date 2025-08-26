@@ -55,7 +55,27 @@ layout_mode = 2
 layout_mode = 2
 text = "Meadow Dash 2D"
 
+[node name="More games box" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.213
+anchor_bottom = 0.154
+offset_left = 453.0
+offset_top = 508.0
+offset_right = 442.624
+offset_bottom = 439.208
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="More games box"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="More games box/VBoxContainer"]
+layout_mode = 2
+text = "More Games"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Title/VBoxContainer/Button" to="Title" method="_on_button_pressed"]
+[connection signal="pressed" from="More games box/VBoxContainer/Button" to="." method="_on_button_pressed"]
