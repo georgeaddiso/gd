@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtgkibiowtwp2"
-path="res://.godot/imported/platformPack_tilesheet.png-c53cfbc88f4e189acc42ef9f9d569de9.ctex"
+path="res://.godot/imported/platformPack_tilesheet.png-705a1ff9fba59380c06230f53474bfa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/platformPack_tilesheet.png"
-dest_files=["res://.godot/imported/platformPack_tilesheet.png-c53cfbc88f4e189acc42ef9f9d569de9.ctex"]
+source_file="res://images/3 - Big Red/platformPack_tilesheet.png"
+dest_files=["res://.godot/imported/platformPack_tilesheet.png-705a1ff9fba59380c06230f53474bfa1.ctex"]
 
 [params]
 
