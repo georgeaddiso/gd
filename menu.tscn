@@ -60,10 +60,11 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.213
 anchor_bottom = 0.154
-offset_left = 453.0
-offset_top = 508.0
-offset_right = 442.624
-offset_bottom = 439.208
+offset_left = 274.0
+offset_top = 512.0
+offset_right = 321.624
+offset_bottom = 443.208
+scale = Vector2(2, 2)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
